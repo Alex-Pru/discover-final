@@ -30,10 +30,6 @@
     animation: slide-in .2s forwards;
 }
 
-html{
-    overflow: hidden;
-}
-
 body{
     background: var(--bg-url) no-repeat top center/cover;
     color: var(--text-color);
