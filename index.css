@@ -27,8 +27,11 @@
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in .2s forwards;
+}
+
+html{
+    overflow: hidden;
 }
 
 body{
@@ -84,11 +87,15 @@ body *{
     border: 0;
     border-radius: 50%;
     z-index: 1;
-    left: 0;
+    animation: slide-out .2s forwards;
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
     cursor: pointer;
+}
+
+#switch button:hover{
+    outline: 0.8rem solid var(--highlight-color);
 }
 
 #switch span{
@@ -169,3 +176,20 @@ footer a{
     font-size: 1.6rem;
 }
 
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-out{
+    from{
+        left: 50%
+    }
+    to{
+        left: 0;
+    }
+}
